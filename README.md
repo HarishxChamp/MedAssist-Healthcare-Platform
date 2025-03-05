@@ -112,8 +112,26 @@ npm start
 
 ## Deployment
 
-### Frontend Deployment (Vercel)
+### Option 1: Automated Deployment Preparation
 
+We've created a helper script to prepare your project for deployment:
+
+```bash
+# Run the deployment preparation script
+node prepare_for_deployment.js
+```
+
+This script will:
+1. Guide you through setting up MongoDB Atlas
+2. Create necessary environment files
+3. Build the frontend for production
+4. Provide next steps for deployment
+
+### Option 2: Manual Deployment
+
+#### Frontend Deployment (Vercel or Netlify)
+
+##### Vercel Deployment
 1. Create a Vercel account at [vercel.com](https://vercel.com)
 2. Install Vercel CLI:
    ```bash
@@ -133,7 +151,26 @@ npm start
    vercel --prod
    ```
 
-### Backend Deployment (Render)
+##### Netlify Deployment
+1. Create a Netlify account at [netlify.com](https://netlify.com)
+2. Install Netlify CLI:
+   ```bash
+   npm install -g netlify-cli
+   ```
+3. Navigate to the frontend directory:
+   ```bash
+   cd frontend
+   ```
+4. Deploy to Netlify:
+   ```bash
+   netlify deploy
+   ```
+5. For production deployment:
+   ```bash
+   netlify deploy --prod
+   ```
+
+#### Backend Deployment (Render)
 
 1. Create a Render account at [render.com](https://render.com)
 2. Create a new Web Service
@@ -159,6 +196,23 @@ Then redeploy the frontend:
 ```bash
 cd frontend
 vercel --prod
+# or for Netlify
+netlify deploy --prod
+```
+
+### Running Locally
+
+For local development and testing before deployment, use:
+
+```bash
+# Windows
+run_local.bat
+
+# macOS/Linux
+# Start backend
+cd backend && npm start
+# In a new terminal
+cd frontend && npm start
 ```
 
 ## Design Elements
