@@ -76,6 +76,15 @@ const timeSlots = [
   '03:00 PM', '03:30 PM', '04:00 PM', '04:30 PM',
 ];
 
+/**
+ * @component Appointments
+ * @description Main component for the appointment booking process.
+ * Implements a multi-step form with doctor selection, date/time picking,
+ * appointment type selection, symptom description, and patient information.
+ * Uses Material-UI components for a responsive and accessible interface.
+ * 
+ * @returns {JSX.Element} The rendered Appointments component with a stepper interface
+ */
 const Appointments = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [selectedDate, setSelectedDate] = useState(null);
@@ -90,14 +99,25 @@ const Appointments = () => {
     email: '',
   });
 
+  /**
+   * Advances to the next step in the appointment booking process
+   */
   const handleNext = () => {
     setActiveStep((prevStep) => prevStep + 1);
   };
 
+  /**
+   * Returns to the previous step in the appointment booking process
+   */
   const handleBack = () => {
     setActiveStep((prevStep) => prevStep - 1);
   };
 
+  /**
+   * Handles the final submission of the appointment data
+   * Collects all form data and would typically send it to the backend API
+   * Currently logs the data to console and advances to the confirmation step
+   */
   const handleSubmit = () => {
     // Submit appointment details to backend
     console.log({
@@ -110,6 +130,11 @@ const Appointments = () => {
     handleNext();
   };
 
+  /**
+   * Renders the appropriate content based on the current step in the booking process
+   * @param {number} step - The current active step index
+   * @returns {JSX.Element} The component for the current step
+   */
   const renderStepContent = (step) => {
     switch (step) {
       case 0:
