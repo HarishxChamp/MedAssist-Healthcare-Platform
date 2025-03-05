@@ -110,6 +110,57 @@ npm install
 npm start
 ```
 
+## Deployment
+
+### Frontend Deployment (Vercel)
+
+1. Create a Vercel account at [vercel.com](https://vercel.com)
+2. Install Vercel CLI:
+   ```bash
+   npm install -g vercel
+   ```
+3. Navigate to the frontend directory:
+   ```bash
+   cd frontend
+   ```
+4. Deploy to Vercel:
+   ```bash
+   vercel
+   ```
+5. Follow the prompts to complete deployment
+6. For production deployment:
+   ```bash
+   vercel --prod
+   ```
+
+### Backend Deployment (Render)
+
+1. Create a Render account at [render.com](https://render.com)
+2. Create a new Web Service
+3. Connect your GitHub repository
+4. Configure the service:
+   - **Name**: medassist-api
+   - **Environment**: Node
+   - **Build Command**: npm install
+   - **Start Command**: npm start
+   - **Plan**: Free (or select appropriate plan)
+5. Add environment variables from your `.env` file
+6. Click "Create Web Service"
+
+### Connecting Frontend to Backend
+
+After deploying both services, update the frontend environment variable:
+
+```
+REACT_APP_API_URL=https://your-render-service-url.onrender.com/api
+```
+
+Then redeploy the frontend:
+```bash
+cd frontend
+vercel --prod
+```
+
 ## Design Elements
 
 ### Color Scheme
