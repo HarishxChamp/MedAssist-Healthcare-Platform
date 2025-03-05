@@ -1,0 +1,15 @@
+Note: This is a placeholder text file. You'll need to create an actual JPG image file for your social media preview.
+
+For best results:
+1. Create an image with dimensions 1200x630 pixels
+2. Include your MedAssist logo and name
+3. Use your brand colors (deep purple #4A148C and teal #00897B)
+4. Add a brief tagline like "Your Complete Healthcare Solution"
+5. Keep the design clean and professional
+
+You can create this image using:
+- Canva (free online design tool)
+- Adobe Photoshop
+- GIMP (free alternative to Photoshop)
+
+Once created, save it as "og-image.jpg" in the frontend/public directory.

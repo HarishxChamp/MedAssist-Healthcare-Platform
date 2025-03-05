@@ -1,3 +1,9 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /profile
+Disallow: /doctor/dashboard
+Disallow: /admin/dashboard
+Disallow: /cart
+
+Sitemap: https://medassist-healthcare.netlify.app/sitemap.xml
