@@ -1,0 +1,456 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anta&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      background-image: url(voilet.jpg);
+    }
+
+    * {
+
+
+      border: border-box;
+
+    }
+
+    .navbar {
+      height: 100px;
+      background-color: rgb(170, 50, 198);
+      display: flex;
+
+      border-bottom: 5px solid rgb(255, 255, 255);
+
+
+
+      animation: blob-bounce 1.8s 1 ease-in;
+
+    }
+
+
+
+    .navlogo {
+      background-image: "C:\Users\haris\Downloads\logo10.webp";
+      height: 100px;
+      width: 200px;
+      margin-right: 40px;
+
+
+    }
+
+    .border {
+      border: 2px solid transparent;
+    }
+
+    .border:hover {
+      border: 5px solid rgb(255, 255, 255);
+    }
+
+    p {
+      font-weight: bold;
+    }
+
+    i {
+      font-size: 30px;
+      color: antiquewhite;
+
+    }
+
+    i {
+      float: right;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+
+
+
+
+
+    }
+
+    i:hover {
+      border: 2px solid rgb(255, 255, 255);
+
+    }
+
+
+    .supra {
+
+      position: absolute;
+
+      height: 900px;
+      width: 600px;
+
+
+      float: left;
+
+      background-color: rgb(176, 53, 198);
+      background-size: contain;
+
+
+    }
+
+
+
+
+    img {
+      height: 300px;
+      width: 400px;
+      position: absolute;
+      top: 150px;
+      left: 150px;
+      right: 350px;
+
+
+    }
+
+    .box2 {
+      float: right;
+      width: 500px;
+      height: 900px;
+
+      animation: blob-bounce 1.8s 1 ease-in;
+
+    }
+
+
+
+    h2 {
+      position: absolute;
+      top: -50px;
+      width: 500px;
+      height: 100px;
+
+      text-align: right;
+      font-family: "Bebas Neue", sans-serif;
+      font-weight: 400;
+      font-size: 100px;
+      ;
+      font-style: normal;
+      color: aliceblue;
+      animation: blob-bounce 1.8s 1 ease-in;
+
+    }
+
+    p {
+      position: absolute;
+      top: 160px;
+      width: 700px;
+      height: 500px;
+      left: 100px;
+
+      font-family: "Bebas Neue", sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      color: azure;
+      position: absolute;
+
+
+      animation: blob-bounce 1.8s 1 ease-in;
+
+    }
+
+    #Stacks1 {
+      position: absolute;
+      left: 200px;
+      top: 300px;
+      width: 700px;
+      height: 500px;
+      border: 4px solid whitesmoke;
+      text-align: center;
+      font-family: "Bebas Neue", sans-serif;
+      font-weight: 400;
+      font-size: 100px;
+      float: left;
+      font-style: normal;
+      color: aliceblue;
+      animation: blob-bounce 4s 1 ease-in;
+
+    }
+
+    #sacks1:hover {
+      transform: perspective(600px) rotatey(-180deg);
+      cursor: pointer;
+
+      animation: blob-bounce 1.8s 1 ease-in;
+
+    }
+
+    #stacks2 {
+      position: absolute;
+      left: 800px;
+      top: -420px;
+      width: 700px;
+      height: 500px;
+      border: 4px solid whitesmoke;
+      text-align: center;
+      font-family: "Bebas Neue", sans-serif;
+      font-weight: 400;
+      font-size: 100px;
+      float: left;
+      font-style: normal;
+      color: aliceblue;
+
+      color: white;
+      /*
+transform: perspective(600px) rotateY(180deg);
+
+transition: transform 5s linear 3s;
+*/
+
+
+      border: 4px solid whitesmoke;
+      animation: blob-bounce 3s 1 ease-in;
+
+    }
+
+
+
+
+
+
+
+
+
+    a {
+      text-decoration: none;
+      font-family: "Anta", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 25px;
+      color: aliceblue;
+    }
+
+    #stack {
+      position: absolute;
+      top: 200px;
+      font-family: "Anta", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 25px;
+      left: 50px;
+      width: 170px;
+      height: 40px;
+      border: 5px solid white;
+      text-align: center;
+      animation: blob-bounce 6s 1 ease-in;
+
+    }
+
+    #submit {
+      font-weight: 400;
+      font-style: normal;
+      font-size: 45px;
+      width: 700px;
+      height: 100px;
+      position: absolute;
+      left: -63px;
+      border: 5px solid rgb(240, 232, 232);
+      text-align: center;
+      transition-duration: 3s;
+      background-color: rgb(176, 53, 198);
+      animation: blob-bounce 3s 1 ease-in;
+
+    }
+
+
+
+    #submit2 {
+      text-align: center;
+      font-family: "Saira Condensed", sans-serif;
+      font-weight: 600;
+      position: absolute;
+      top: 25px;
+      width: 250px;
+      height: 50px;
+      right: 250px;
+      background-color: rgb(255, 255, 255);
+      border: 4px solid black;
+      border-radius: 10px;
+      font-size: 30px;
+      color: black;
+      animation: blob-bounce 8s 1 ease-in;
+
+    }
+
+
+    #submit3 {
+      float: right;
+      position: absolute;
+      top: -490px;
+      left: -60px;
+      animation: blob-bounce 1.8s 1 ease-in;
+
+    }
+
+    footer {
+      color: aliceblue;
+      width: 100%;
+      background-color: black;
+      position: absolute;
+      bottom: 0px;
+    }
+
+    .box3 {
+      font-family: "Anta", sans-serif;
+      font-weight: 400;
+      color: aliceblue;
+      font-size: medium;
+      font-style: normal;
+      position: absolute;
+      bottom: -800px;
+      left: 60px;
+      animation: blob-bounce 6s 1 ease-in;
+
+    }
+
+    .subbox1 {
+      float: left;
+      width: 400px;
+      height: 600px;
+      position: absolute;
+      bottom: -600px;
+      left: 60px;
+
+      animation: blob-bounce 4s 1 ease-in;
+
+    }
+
+    marquee {
+      width: 1000px;
+      height: 100%;
+      font-family: "Anta", sans-serif;
+      font-weight: 400;
+      color: aliceblue;
+      font-size: large;
+      font-style: normal;
+      position: relative;
+      bottom: -400px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <div class="navlogo">
+      <img src="C:\Users\haris\Downloads\logo10.webp"
+        style="height: 100px; width: 200px; position: absolute; top: 0px; left: 10px;">
+    </div>
+
+    <a href="C:\Users\haris\Desktop\classroom\login.html"><i class="fa-solid fa-user "
+        style="position: absolute; right: 100px; animation: blob-bounce 0.5s  ease-in;"></i></a>
+    <a href="https://www.instagram.com/ageon_daenerys?igsh=MXd3Z2wyN3dxczk4eQ=="><i class="fa-brands fa-instagram"
+        style="position: absolute; right: 200px; animation: blob-bounce 1s  ease-in;"></i></a>
+    <i class="fa-brands fa-facebook" style="position: absolute ; right:300px; 
+               animation: blob-bounce 1.5s  ease-in;"></i>
+    <a href=https://wa.link/st30ep> <i class="fa-brands fa-whatsapp"
+        style="position: absolute; right: 400px; animation: blob-bounce 2s  ease-in;"></i>
+      <a href="C:\Users\haris\Desktop\classroom\supra.html"> <i class="fa-solid fa-house"
+          style="position: absolute; right: 500px; animation: blob-bounce 2.5s  ease-in;"></i></a>
+      </i>
+      <a href=C:\Users\haris\Desktop\classroom\protienbox1.html><i class="fa-solid fa-jar" style="position: absolute ; right:600px; 
+               animation: blob-bounce 3s  ease-in; color: black;"></i> </a>
+      <i class="fa-solid fa-jar" style="position: absolute ; right:700px; 
+                      animation: blob-bounce 3.5s  ease-in; color: rgb(0, 149, 255);"></i>
+      <i class="fa-solid fa-jar" style="position: absolute ; right:800px; 
+                          animation: blob-bounce 4s  ease-in; color: rgb(255, 51, 0);"></i>
+  </div>
+  </div>
+  <div class="box2">
+
+    <div id="stacks1">
+      <h2>cut-fatloss</h2>
+      <div id="stack">creatine-cmg</div>
+      <div id="stack" style="position: absolute; top: 270px; left: 50px; right: 500px; ">pre-workout
+        <div id="stack" style="position: absolute; top: 70px; left: -1px;">cut-lean
+          <div id="stack" style="position: absolute; top: 69px; left: -2px;">blue-berry<br><br>
+            <div id="submit">
+              <div id="submit2">
+                pre-booking
+                <img src="C:\Users\haris\Downloads\logo11.png" style="
+                    float: right;
+                  position: absolute;
+                  top: -370px;
+                  left: 10px;
+                  right: 700px;
+               height: 400px;
+               width: 600px;
+                  ">
+
+
+
+              </div>
+            </div>
+
+
+            <div id="stacks2">
+              <h2>lean-bulk</h2>
+              <div id="stack"><a href="C:\Users\haris\Downloads\9b5fa9dfc6679fffbc43acaa9df2cf6c.jpg">muscle-grps</a>
+              </div>
+              <div id="stack" style="position: absolute; top: 270px; left: 50px; "><a
+                  href="C:\Users\haris\Downloads\OIP.jpg">weight-gain</a>
+                <div id="stack" style="position: absolute; top: 70px; left: -1px;"><a
+                    href="C:\Users\haris\Downloads\strong-and-lean-week-1-4-diet.jpg">muscle-mass</a>
+                  <div id="stack" style="position: absolute; top: 69px; left: -2px;">lean-muscle<br><br>
+                    <div id="submit">
+                      <div id="submit2">
+                        pre-booking
+                        <div id="submit3">
+                          <img src="C:\Users\haris\Downloads\img7.png" style="  float: right;
+              position: absolute;
+              top: 140px;
+              left: 120px;
+              right: 500px;
+           height: 300px;
+           width: 400px;
+              ">
+                          <br><br>
+                          <br>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="subbox1">
+    <img src="C:\Users\haris\Downloads\oimg1.jpg" style="height: 500px; width: 700px;">
+  </div>
+  <div class="box3">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita deserunt facere tenetur nemo voluptatem quod ipsum
+    possimus consequatur magnam reprehenderit! Totam aut molestiae incidunt esse sed quisquam ipsum repellat ut.
+    Alias eos quaerat dolores iure sed veniam molestias esse repellat. Dicta, eligendi provident. Totam laudantium quas
+    fugiat mollitia quasi, exercitationem optio perferendis praesentium a? Tempore soluta facilis at amet earum!
+  </div>
+  vina
