@@ -213,6 +213,16 @@ This project helped me grow as a developer in several ways:
 - Enhanced my UI/UX design capabilities
 - Strengthened my understanding of authentication and security best practices
 
+## Project Documentation
+
+For detailed project documentation, including technical details and implementation guides, please visit the [MedAssist Project Portfolio](https://drive.google.com/drive/folders/1ZtwfmQSQfKY8VWUn89oO7zgAi_fVEV-J?usp=sharing).
+
+This portfolio includes:
+- Comprehensive project overview
+- Technical implementation details
+- Resume-ready project descriptions
+- Code samples and architecture diagrams
+
 ## Contact
 
 If you're interested in discussing this project or potential opportunities, feel free to reach out to me at (madeforcisco115@gmail.com)
