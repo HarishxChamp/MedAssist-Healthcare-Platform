@@ -112,105 +112,37 @@ npm start
 
 ## Deployment
 
-### Option 1: Automated Deployment Preparation
+I've set up deployment configurations for both the frontend and backend:
 
-We've created a helper script to prepare your project for deployment:
+### Frontend Deployment (Vercel or Netlify)
 
-```bash
-# Run the deployment preparation script
-node prepare_for_deployment.js
-```
+I chose to deploy the frontend using Netlify for its simplicity and reliability:
 
-This script will:
-1. Guide you through setting up MongoDB Atlas
-2. Create necessary environment files
-3. Build the frontend for production
-4. Provide next steps for deployment
+1. Connected my GitHub repository to Netlify
+2. Set up the build configuration:
+   - Build command: `npm run build`
+   - Publish directory: `build`
+3. Added environment variables to connect to the backend
 
-### Option 2: Manual Deployment
+### Backend Deployment (Render)
 
-#### Frontend Deployment (Vercel or Netlify)
+For the backend, I selected Render as it provides a reliable Node.js hosting environment:
 
-##### Vercel Deployment
-1. Create a Vercel account at [vercel.com](https://vercel.com)
-2. Install Vercel CLI:
-   ```bash
-   npm install -g vercel
-   ```
-3. Navigate to the frontend directory:
-   ```bash
-   cd frontend
-   ```
-4. Deploy to Vercel:
-   ```bash
-   vercel
-   ```
-5. Follow the prompts to complete deployment
-6. For production deployment:
-   ```bash
-   vercel --prod
-   ```
-
-##### Netlify Deployment
-1. Create a Netlify account at [netlify.com](https://netlify.com)
-2. Install Netlify CLI:
-   ```bash
-   npm install -g netlify-cli
-   ```
-3. Navigate to the frontend directory:
-   ```bash
-   cd frontend
-   ```
-4. Deploy to Netlify:
-   ```bash
-   netlify deploy
-   ```
-5. For production deployment:
-   ```bash
-   netlify deploy --prod
-   ```
-
-#### Backend Deployment (Render)
-
-1. Create a Render account at [render.com](https://render.com)
-2. Create a new Web Service
-3. Connect your GitHub repository
-4. Configure the service:
-   - **Name**: medassist-api
-   - **Environment**: Node
-   - **Build Command**: npm install
-   - **Start Command**: npm start
-   - **Plan**: Free (or select appropriate plan)
-5. Add environment variables from your `.env` file
-6. Click "Create Web Service"
-
-### Connecting Frontend to Backend
-
-After deploying both services, update the frontend environment variable:
-
-```
-REACT_APP_API_URL=https://your-render-service-url.onrender.com/api
-```
-
-Then redeploy the frontend:
-```bash
-cd frontend
-vercel --prod
-# or for Netlify
-netlify deploy --prod
-```
+1. Created a Web Service on Render connected to my repository
+2. Configured the service with:
+   - Environment: Node
+   - Build Command: `npm install`
+   - Start Command: `npm start`
+3. Set up environment variables for database connection and JWT authentication
 
 ### Running Locally
 
-For local development and testing before deployment, use:
+To run the project locally:
 
 ```bash
-# Windows
-run_local.bat
-
-# macOS/Linux
 # Start backend
 cd backend && npm start
+
 # In a new terminal
 cd frontend && npm start
 ```

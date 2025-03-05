@@ -7,9 +7,13 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
+      - key: PORT
+        value: 8080
       - key: MONGO_URI
         sync: false
       - key: JWT_SECRET
-        sync: false
-      - key: PORT
-        value: 8080
+        generateValue: true
+      - key: JWT_EXPIRE
+        value: 30d
+    healthCheckPath: /api/health
+    autoDeploy: true
