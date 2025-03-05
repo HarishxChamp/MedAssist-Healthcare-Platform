@@ -312,7 +312,7 @@ const Appointments = () => {
                   </Select>
                 </FormControl>
               </Grid>
-              <Grid item xs={12} md={6}>
+              <Grid item xs={12} sm={6} md={6}>
                 <TextField
                   fullWidth
                   label="Phone Number"
