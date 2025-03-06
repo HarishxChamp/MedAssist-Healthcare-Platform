@@ -3,12 +3,17 @@
   "buildCommand": "npm run build",
   "outputDirectory": "build",
   "routes": [
+    // Static assets should be served as they are
     { "src": "/static/(.*)", "dest": "/static/$1" },
+    
+    // Favicon and other root files
     { "src": "/favicon.ico", "dest": "/favicon.ico" },
     { "src": "/logo192.png", "dest": "/logo192.png" },
     { "src": "/logo512.png", "dest": "/logo512.png" },
     { "src": "/manifest.json", "dest": "/manifest.json" },
     { "src": "/robots.txt", "dest": "/robots.txt" },
+    
+    // All other routes go to index.html for React Router to handle
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
