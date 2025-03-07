@@ -48,13 +48,14 @@ const StyledCard = styled(Card)(({ theme }) => ({
   },
 }));
 
-const TimeSlotButton = styled(Button)(({ theme, selected }) => ({
+const TimeSlotButton = styled(Button)(({ theme, selected, disabled }) => ({
   borderRadius: 12,
   padding: '10px 16px',
   transition: 'all 0.2s ease',
   backgroundColor: selected ? theme.palette.primary.main : 'transparent',
   color: selected ? '#fff' : theme.palette.primary.main,
   border: `1px solid ${selected ? 'transparent' : theme.palette.primary.main}`,
+  opacity: disabled ? 0.5 : 1,
   '&:hover': {
     backgroundColor: selected ? theme.palette.primary.dark : 'rgba(74, 20, 140, 0.08)',
     transform: 'scale(1.05)',
@@ -71,10 +72,13 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
 const steps = ['Select Doctor', 'Choose Time', 'Patient Details', 'Confirmation'];
 
 const timeSlots = [
-  '09:00 AM', '09:30 AM', '10:00 AM', '10:30 AM',
-  '11:00 AM', '11:30 AM', '02:00 PM', '02:30 PM',
+  '09:00 AM', '09:30 AM', '10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM',
+  '01:00 PM', '01:30 PM', '02:00 PM', '02:30 PM',
   '03:00 PM', '03:30 PM', '04:00 PM', '04:30 PM',
 ];
+
+// Mock data for booked slots - in a real app, this would come from an API
+const bookedSlots = ['10:00 AM', '01:30 PM', '03:00 PM'];
 
 /**
  * @component Appointments
@@ -119,6 +123,12 @@ const Appointments = () => {
    * Currently logs the data to console and advances to the confirmation step
    */
   const handleSubmit = () => {
+    // Form validation before submission
+    if (!selectedDate || !selectedTime || !patientDetails.name || !patientDetails.phone) {
+      alert('Please fill in all required fields');
+      return;
+    }
+    
     // Submit appointment details to backend
     console.log({
       date: selectedDate,
@@ -251,6 +261,7 @@ const Appointments = () => {
                 <Grid item xs={6} sm={4} md={3} key={time}>
                   <TimeSlotButton
                     selected={selectedTime === time}
+                    disabled={bookedSlots.includes(time)}
                     fullWidth
                     onClick={() => setSelectedTime(time)}
                     startIcon={<AccessTime />}
@@ -260,6 +271,16 @@ const Appointments = () => {
                 </Grid>
               ))}
             </Grid>
+            {selectedTime && bookedSlots.includes(selectedTime) && (
+              <Typography color="error" sx={{ mt: 2 }}>
+                This time slot is already booked. Please select another time.
+              </Typography>
+            )}
+            {selectedDate && selectedTime && !bookedSlots.includes(selectedTime) && (
+              <Typography color="success.main" sx={{ mt: 2 }}>
+                Great choice! This slot is available.
+              </Typography>
+            )}
           </StyledPaper>
         );
 
