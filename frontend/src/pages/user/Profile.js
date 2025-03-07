@@ -24,6 +24,7 @@ import {
   DialogContent,
   DialogActions,
   TextField,
+  LinearProgress,
 } from '@mui/material';
 import {
   Person,
@@ -63,6 +64,8 @@ const Profile = () => {
   const [tabValue, setTabValue] = useState(0);
   const [editDialogOpen, setEditDialogOpen] = useState(false);
   const [editField, setEditField] = useState({ name: '', value: '' });
+  const [downloadProgress, setDownloadProgress] = useState(0);
+  const [isDownloading, setIsDownloading] = useState(false);
 
   const handleEditClick = (name, value) => {
     setEditField({ name, value });
@@ -72,6 +75,28 @@ const Profile = () => {
   const handleEditSave = () => {
     // Save edited value
     setEditDialogOpen(false);
+  };
+
+  // Function to simulate downloading medical records
+  const handleDownloadRecords = () => {
+    setIsDownloading(true);
+    setDownloadProgress(0);
+    
+    // Simulate download progress
+    const interval = setInterval(() => {
+      setDownloadProgress((prevProgress) => {
+        const newProgress = prevProgress + 10;
+        if (newProgress >= 100) {
+          clearInterval(interval);
+          setTimeout(() => {
+            setIsDownloading(false);
+            alert('Medical records downloaded successfully!');
+          }, 500);
+          return 100;
+        }
+        return newProgress;
+      });
+    }, 300);
   };
 
   const userInfo = {
@@ -359,9 +384,15 @@ const Profile = () => {
                               startIcon={<Download />}
                               variant="outlined"
                               size="small"
+                              onClick={handleDownloadRecords}
                             >
                               Download
                             </Button>
+                            {isDownloading && (
+                              <Box sx={{ mt: 2 }}>
+                                <LinearProgress variant="determinate" value={downloadProgress} />
+                              </Box>
+                            )}
                             <Button
                               startIcon={<Share />}
                               variant="outlined"
